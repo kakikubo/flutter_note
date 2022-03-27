@@ -26,10 +26,16 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             children: [
               const Spacer(),
-              const TextField(),
+              TextField(
+                onChanged: (text) {
+                  setState(() {
+                    inputText = text;
+                  });
+                },
+              ),
               const SizedBox(height: 32),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: inputText.isEmpty ? null : () {},
                 child: const Text('保存'),
               ),
               const Spacer(),
