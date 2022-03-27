@@ -12,6 +12,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  var inputText = '';
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
